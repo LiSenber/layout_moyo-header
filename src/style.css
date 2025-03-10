@@ -1,19 +1,21 @@
-* {
+:root {
+  --primary-blue: #00acdc;
+}
+
+body,
+header,
+a,
+img,
+nav,
+ul,
+li {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-
 html {
-  font-family: Roboto, sans-serif;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
 }
 
 .header {
@@ -31,6 +33,7 @@ html {
 
 .nav__list {
   display: flex;
+  list-style: none;
 }
 
 .nav__item {
@@ -48,20 +51,21 @@ html {
   color: #000;
   font-size: 12px;
   text-transform: uppercase;
+  text-decoration: none;
 }
 
 .nav__link:hover {
-  color: #00acdc;
+  color: var(--primary-blue);
 }
 
 .is-active {
-  color: #00acdc;
+  color: var(--primary-blue);
   position: relative;
 }
 
 .is-active::after {
   content: '';
-  background-color: #00acdc;
+  background-color: var(--primary-blue);
   border-radius: 8px;
   width: 100%;
   height: 4px;
